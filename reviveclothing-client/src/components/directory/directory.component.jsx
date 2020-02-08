@@ -11,28 +11,28 @@ class Directory extends React.Component {
     this.state = { //state value
       sections: [{
         title: 'hats',
-        imageUrl: '/img/joe-ciciarelli-FwVnAY_xMaY-unsplash.jpg',
+        imageUrl: 'https://images.unsplash.com/photo-1575428652377-a2d80e2277fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
         id: 1
       },
       {
         title: 'jackets',
-        imageUrl: 'https://unsplash.com/photos/r0l0Es5fbbs',
+        imageUrl: 'https://images.unsplash.com/photo-1580047883831-5db03837b0b3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
         id: 2
       },
       {
         title: 'sneakers',
-        imageUrl: 'https://unsplash.com/photos/updW-QUccFE',
+        imageUrl: 'https://images.unsplash.com/photo-1516478177764-9fe5bd7e9717?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
         id: 3
       },
       {
         title: 'womens',
-        imageUrl: 'https://unsplash.com/photos/xe68QiMaDrQ',
+        imageUrl: 'https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80',
         size: 'large',
         id: 4
       },
       {
         title: 'mens',
-        imageUrl: 'https://unsplash.com/photos/tBt9JxuQBYs',
+        imageUrl: 'https://images.unsplash.com/photo-1436363271110-9de4ee5dcc6e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60',
         size: 'large',
         id: 5
       }]
