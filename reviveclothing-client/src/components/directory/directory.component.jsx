@@ -32,4 +32,9 @@ class Directory extends React.Component {
       }]
     }
   }
+  render() {
+    return (
+      <div className='directory-menu'></div> 
+    )
+  }
 }
