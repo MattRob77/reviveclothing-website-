@@ -10,6 +10,12 @@ const HatsPage = () => (
   </div>
 );
 
+const JacketsPage = () => (
+  <div>
+    <h1>JACKETS PAGE </h1>
+  </div>
+);
+
 function App() {
   return (
     <div>
