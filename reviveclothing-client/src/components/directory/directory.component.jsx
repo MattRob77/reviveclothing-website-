@@ -27,13 +27,13 @@ class Directory extends React.Component {
       },
       {
         title: 'womens',
-        imageUrl: 'https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/52612854_10161332520245534_5025432806600212480_n.jpg?_nc_cat=104&_nc_ohc=TMX5GJr6WGoAX-oF55-&_nc_ht=scontent-lga3-1.xx&oh=32df0a18d77718dbe53ed5de05f1b4ff&oe=5EB5ACA6',
+        imageUrl: 'https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60',
         size: 'large',
         id: 6
       },
       {
         title: 'mens',
-        imageUrl: 'https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/67305747_10156684957061051_4648138359351279616_n.jpg?_nc_cat=110&_nc_ohc=h7ar7XqQ0V8AX921UWZ&_nc_ht=scontent-lga3-1.xx&oh=380e59321248c6da096542c3d686e8f7&oe=5EBD45EF',
+        imageUrl: 'https://images.unsplash.com/photo-1524383954004-5663dc51fa67?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60',
         size: 'large',
         id: 7
       },
