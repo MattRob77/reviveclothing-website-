@@ -15,3 +15,4 @@ const CollectionPreview = ({ title, items }) => (
 );
 
 export default CollectionPreview;
+//Filtering, Mapping items and index then rendering object that is less than 4
