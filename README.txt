@@ -8,7 +8,7 @@ There are 2 container components * (2)true
 
 There are 5 stateless components *
 
-There are 3 routes * (1)
+There are 3 routes * (2)
 
 [x]react-router is being used with proper RESTful routing * true
 
