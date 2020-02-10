@@ -4,13 +4,13 @@ The code is written in ES6 as much as possible *
 
 [x]create-react-app was used to create your React app *
 
-There are 2 container components * (2)true 
+There are 2 container components * (2)true
 
 There are 5 stateless components *
 
-There are 3 routes *
+There are 3 routes * (1)
 
-react-router is being used with proper RESTful routing *
+[x]react-router is being used with proper RESTful routing * true
 
 Redux and redux-thunk middleware are being used to modify state change and make use of async actions to send data and receive data from the server *
 
