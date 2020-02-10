@@ -6,9 +6,11 @@ import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shop/shop.component.jsx';
 
 
+
 function App() {
   return (
     <div>
+    
       <switch>
       <Route exact path='/' component={HomePage} />
       <Route path='/shop' component={ShopPage} />
