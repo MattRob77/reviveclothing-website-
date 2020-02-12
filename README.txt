@@ -4,9 +4,9 @@ The code is written in ES6 as much as possible *
 
 [x]create-react-app was used to create your React app *
 
-There are 2 container components * (3)true
+[x]There are 2 container components * (3)true
 
-There are 5 stateless components *
+[x]There are 5 stateless components *
 
 There are 3 routes * (2)
 
