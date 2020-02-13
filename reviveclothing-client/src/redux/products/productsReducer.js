@@ -1,7 +1,5 @@
-export default(state=[], action) => {
-  switch(action.type) {
+let = 0
 
-    default:
-      return state
-  }
-}
+export default function products(state = initialState.products, action){
+     return state;
+};

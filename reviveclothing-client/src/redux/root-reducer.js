@@ -3,5 +3,6 @@ import { combineReducers } from 'redux'
 import cartReducer from './cart/cart.reducer';
 
 export default combineReducers({
-  cart: cartReducer  //Not shorthand cart
+  cart: cartReducer,  //Not shorthand cart
+  products: productsReducer
 });
