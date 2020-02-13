@@ -1,12 +1,12 @@
-let = 0
+let id = 0
 
 export default(state=[], action) => {
   switch(action.type) {
     case 'Add_To_Cart':
       return [...state, action.payload]
     case 'Remove_From_Cart':
-      return state.filter( i = i.id !== action.payload)
-
+      let newCart = state.filter(cart => cart.id !==action.payload)
+      return [...newCart]
     default:
       return state
   }
