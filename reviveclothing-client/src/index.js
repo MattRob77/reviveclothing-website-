@@ -3,21 +3,22 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
+import store from './redux/store';
+
+
 //import items from './itemsReducer';
 //import products from './productsReducer';
 
-import store from './redux/store';
-import rootReducer from './redux/rootReducer'; 
 import './index.css';
 import App from './App';
 
 
 ReactDOM.render(
- //<Provider store={store}>
-    <BrowserRouter>
+// <Provider>
+   <BrowserRouter>
       <App />
     </BrowserRouter>,
-//  </Provider>
+// </Provider>
   document.getElementById('root')
 );
 
