@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import CartIcon from '../cart-icon/cart-icon.component';
 
 
+
 import './header.styles.scss';
 
 
@@ -25,5 +26,6 @@ const Header = () => (
   </div>
 </div>
 )
+
 
 export default Header;
