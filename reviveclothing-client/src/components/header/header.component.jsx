@@ -1,8 +1,13 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom';
 
+
+
+import CartIcon from '../cart-icon/cart-icon.component';
+
+
 import './header.styles.scss';
+
 
 const Header = () => (
   <div className='header'>
@@ -16,6 +21,7 @@ const Header = () => (
     <Link className='option' to='/signin'>
       SIGNIN
     </Link>
+  <CartIcon />
   </div>
 </div>
 )
