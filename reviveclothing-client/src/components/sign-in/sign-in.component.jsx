@@ -1,5 +1,6 @@
 import React from 'react';
-
+import { connect } from 'react-redux';
+import { updateSignInForm } from "../actions/signInForm";
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
 
@@ -61,4 +62,11 @@ class SignIn extends React.Component {
   }
 }
 
-export default SignIn;
+const mapStateToProps = state => {
+  return {
+    username: state.signInForm.username,
+    password: state.signInForm.password
+  }
+}
+//
+export default connect(mapStateToProps, { updateSignInForm })(SignIn);
