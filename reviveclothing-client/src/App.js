@@ -9,18 +9,21 @@ import Header from './components/header/header.component';
 import './App.css';
 
 
-function App() {
-  return (
-    <div>
-    <Header />
-      <switch>
-      <Route exact path='/' component={HomePage} />
-      <Route path='/shop' component={ShopPage} />
-      <Route path='/signin' component={SignInAndSignUpPage} />
-      </switch>
-    </div>
+class App extends React.Component {
 
-  );
+  
+  render(){
+    return (
+      <div>
+      <Header />
+        <switch>
+        <Route exact path='/' component={HomePage} />
+        <Route path='/shop' component={ShopPage} />
+        <Route path='/signin' component={SignInAndSignUpPage} />
+        </switch>
+      </div>
+    );
+  }
 }
 
 export default App;
