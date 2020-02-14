@@ -10,7 +10,6 @@ export const setCurrentUser = user => {
 
 //async action creators
 export const signIn = credentials => {
-  console.log("credentials are", credentials)
   return dispatch => {
     return fetch("http://localhost:3000/signin", {
       method: "POST",

@@ -11,16 +11,16 @@ import './App.css';
 
 class App extends React.Component {
 
-  
+
   render(){
     return (
       <div>
       <Header />
-        <switch>
+        <Switch>
         <Route exact path='/' component={HomePage} />
         <Route path='/shop' component={ShopPage} />
         <Route path='/signin' component={SignInAndSignUpPage} />
-        </switch>
+        </Switch>
       </div>
     );
   }
