@@ -11,7 +11,7 @@ export const setCurrentuser = user => {
 //async action creators
 export signin = credentials => {
   return dispatch => {
-    return fetch("http://localhost:3000/login", {
+    return fetch("http://localhost:3000/signin", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

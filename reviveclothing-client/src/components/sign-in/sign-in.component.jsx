@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { updateSignInForm } from "../actions/signInForm";
+import { updateSignInForm } from "../../actions/signInForm";
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
 
@@ -24,11 +24,10 @@ class SignIn extends React.Component {
   }
 
   handleChange = event => {
-    const { value, name } = event.target;
+    const { name, value} = event.target;
 
     this.setState({ [name]: value });
   };
-
   render() {
     return(
       <div className='sign-in'>
@@ -64,8 +63,7 @@ class SignIn extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    username: state.signInForm.username,
-    password: state.signInForm.password
+    signInForm: state.signInForm
   }
 }
 //
