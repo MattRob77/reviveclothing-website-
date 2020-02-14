@@ -1,6 +1,6 @@
 //synch action creators
 
-export const setCurrentuser = user => {
+export const setCurrentUser = user => {
   return {
     type: "SET_CURRENT_USER",
     user
@@ -9,14 +9,15 @@ export const setCurrentuser = user => {
 
 
 //async action creators
-export signin = credentials => {
+export const signIn = credentials => {
+  console.log("credentials are", credentials)
   return dispatch => {
     return fetch("http://localhost:3000/signin", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(username: "Junia", password:"password")
+      body: JSON.stringify()
     })
   }
 }

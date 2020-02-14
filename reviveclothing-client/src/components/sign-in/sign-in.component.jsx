@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { updateSignInForm } from "../../actions/signInForm";
+import { signIn } from "../../actions/currentUser";
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
 
@@ -17,7 +18,7 @@ class SignIn extends React.Component {
     }
   }
 
-  handleSubmit = event => {
+    handleSubmit = event => {
     event.preventDefault();
 
     this.setState({ email: '', password: ''})
@@ -67,4 +68,4 @@ const mapStateToProps = state => {
   }
 }
 //
-export default connect(mapStateToProps, { updateSignInForm })(SignIn);
+export default connect(mapStateToProps, { updateSignInForm, signIn })(SignIn);
