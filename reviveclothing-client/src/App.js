@@ -1,6 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-
+import { connect } from 'react-redux'
+import { getCurrentUser } from './actions/currentUser'
 import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shop/shop.component';
 import SignInAndSignUpPage from'./pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
@@ -10,6 +11,10 @@ import './App.css';
 
 
 class App extends React.Component {
+
+  componentDidMount() {
+    this.props.getCurrentUser()
+  }
 
 
   render(){
@@ -26,4 +31,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default connect (null, { getCurrentUser }) (App);

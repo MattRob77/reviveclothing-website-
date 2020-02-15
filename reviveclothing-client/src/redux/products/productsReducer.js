@@ -1,7 +1,21 @@
-let id = 0
+export default(state={}, action) => {
+switch (action.type) {
+  case "GET_PRODUCTS":
 
-export default(state=[], action) => {
+  const products = {}
+
+  action.payload.forEach(product => {
+    products[product.id] = product
+  })
+
+  return { ...state, ...products }
+
+
+  default:
   return state;
+
+}
+
 }
 
 

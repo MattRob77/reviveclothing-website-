@@ -13,7 +13,6 @@ class SignIn extends React.Component {
 
     this.state = {
       email: '',
-      username:'',
       password: ''
 
     }
@@ -22,6 +21,7 @@ class SignIn extends React.Component {
     handleSubmit = event => {
     event.preventDefault();
 
+    this.props.signIn(this.state)
     this.setState({ email: '', password: ''})
   }
 
@@ -69,4 +69,4 @@ const mapStateToProps = state => {
   }
 }
 //
-export default connect(mapStateToProps, { updateSignInForm, signIn })(SignIn);
+export default connect(mapStateToProps, { signIn })(SignIn);

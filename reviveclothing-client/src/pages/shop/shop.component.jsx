@@ -1,6 +1,8 @@
 import React from 'react';
 import SHOP_DATA from './shop.data.js';
 import CollectionPreview from '../../components/collection-preview/collection-preview';
+import { connect } from 'react-redux';
+import { getProducts } from '../../actions/products';
 
 
 class ShopPage extends React.Component {
@@ -12,11 +14,14 @@ class ShopPage extends React.Component {
     };
   }
 
-  render() {
-    const {collections} = this.state; //Study this out more maybe refracture it
+  componentDidMount() {
+    this.props.getProducts()
+  };
+
+  render() {  
     return (<div className='shop-page'>
       {
-        collections.map(({id, ...otherCollectionProps}) => (
+        this.props.products.map(({id, ...otherCollectionProps}) => (
           <CollectionPreview key={id} {...otherCollectionProps} />
         ))
       }
@@ -25,5 +30,8 @@ class ShopPage extends React.Component {
   }
 }
 
+const mapStateToProps = ({products}) => ({
+  products: Object.values(products)
+})
 
-export default ShopPage;
+export default connect(mapStateToProps, { getProducts })(ShopPage); //es6
