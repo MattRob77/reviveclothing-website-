@@ -10,7 +10,7 @@ class Directory extends React.Component {
 
     this.state = { //state value
       sections: [{
-      
+
         title: 'womens',
         imageUrl: 'https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60',
         size: 'large',
