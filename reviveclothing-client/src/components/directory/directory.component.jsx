@@ -10,25 +10,7 @@ class Directory extends React.Component {
 
     this.state = { //state value
       sections: [{
-
-        title: 'hats',
-        imageUrl: 'https://images.unsplash.com/photo-1575428652377-a2d80e2277fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-        id: 3,
-        linkUrl: 'hats'
-      },
-      {
-        title: 'jackets',
-        imageUrl: 'https://images.unsplash.com/photo-1580047883831-5db03837b0b3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-        id: 4,
-        linkUrl: ''
-      },
-      {
-        title: 'sneakers',
-        imageUrl: 'https://images.unsplash.com/photo-1516478177764-9fe5bd7e9717?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-        id: 5,
-        linkUrl: ''
-      },
-      {
+      
         title: 'womens',
         imageUrl: 'https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60',
         size: 'large',
@@ -54,7 +36,7 @@ class Directory extends React.Component {
   render() {
     return (
       <div className='directory-menu'>
-        {this.state.sections.map(({ id, ...otherSectionProps}) => ( //es6 spread operater 
+        {this.state.sections.map(({ id, ...otherSectionProps}) => ( //es6 spread operater
             <MenuItem key={id} {...otherSectionProps} /> //passing in all key value pairs
           ))}
       </div>
