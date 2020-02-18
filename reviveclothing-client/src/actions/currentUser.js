@@ -7,8 +7,6 @@ export const setCurrentUser = user => {
   }
 }
 
-
-
 //async action creators
 
 export const signIn = credentials => {
