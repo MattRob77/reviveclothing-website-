@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { getProducts } from '../../actions/products';
 
 
+
 class ShopPage extends React.Component {
   constructor(props) {
     super(props);
