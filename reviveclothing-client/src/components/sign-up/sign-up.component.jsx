@@ -1,21 +1,23 @@
 import React from 'react';
-
+import { connect } from 'react-redux'
+import { updateSignUpForm } from "../../actions/signUpForm";
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
 
 import './sign-up.styles.scss';
 
 class SignUp extends React.Component { //stateful class (store what the user is inputing)
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
-      displayName: '',
-      email: '',
-      password: '',
-      confirmPassword: ''
+        displayName: '',
+        email: '',
+        password: '',
+        confirmPassword: ''
     }
-  }
+
+  };
 
   handleSubmit = event => {
     event.preventDefault();
@@ -29,6 +31,7 @@ class SignUp extends React.Component { //stateful class (store what the user is 
     this.setState({ [name]: value});
   }
 
+
   render() {
     const { displayName, email, password, confirmPassword } = this.state;
     return(
@@ -37,34 +40,34 @@ class SignUp extends React.Component { //stateful class (store what the user is 
         <span>Sign up with your email and password</span>
         <form className='sign-up-form' onSubmit={this.handleSubmit}>
           <FormInput
-            type='text'
+            type='displayName'
             name='displayName'
-            value={displayName}
-            onChange={this.handleChange}
+            handleChange={this.handleChange}
+            value={this.state.displayName}
             label='Display Name'
             required
           />
           <FormInput
             type='email'
             name='email'
-            value={email}
-            onChange={this.handleChange}
+            handleChange={this.handleChange}
+            value={this.state.email}
             label='Email'
             required
           />
           <FormInput
             type='password'
             name='password'
-            value={password}
-            onChange={this.handleChange}
+            handleChange={this.handleChange}
+            value={this.state.password}
             label='Password'
             required
           />
           <FormInput
             type='password'
             name='confirmPassword'
-            value={confirmPassword}
-            onChange={this.handleChange}
+            handleChange={this.handleChange}
+            value={this.state.confirmPassword}
             label='confirm Password'
             required
           />
@@ -72,6 +75,12 @@ class SignUp extends React.Component { //stateful class (store what the user is 
         </form>
       </div>
     );
+  }
+}
+
+const mapStateToProps = state => {
+  return {
+    signUpForm: state.signUpForm
   }
 }
 

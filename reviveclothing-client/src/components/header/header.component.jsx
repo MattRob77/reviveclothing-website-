@@ -8,7 +8,7 @@ import CartIcon from '../cart-icon/cart-icon.component';
 import './header.styles.scss';
 
 
-const Header = () => (
+const Header = ({ currentUser }) => (
   <div className='header'>
     <Link className='logo-container' to="/">
       <Logo className='logo' />
@@ -21,12 +21,14 @@ const Header = () => (
       CONTACT
     </Link>
     <Link className='option' to='/signin'>
-      SIGNIN
+      SIGN IN
     </Link>
   <CartIcon />
   </div>
 </div>
 )
+
+
 
 
 export default Header;

@@ -9,16 +9,12 @@ class ShopPage extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      collections: SHOP_DATA
-    };
-  }
-
+}
   componentDidMount() {
     this.props.getProducts()
   };
 
-  render() {  
+  render() {
     return (<div className='shop-page'>
       {
         this.props.products.map(({id, ...otherCollectionProps}) => (
