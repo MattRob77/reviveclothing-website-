@@ -5,7 +5,7 @@ import CustomButton from '../custom-button/custom-button.component';
 
 import './sign-up.styles.scss';
 
-class SignUp extends React.Component {
+class SignUp extends React.Component { //stateful class (store what the user is inputing)
   constructor() {
     super();
 
@@ -30,7 +30,7 @@ class SignUp extends React.Component {
   }
 
   render() {
-    const {displayName, email, password, confirmPassword} = this.state;
+    const { displayName, email, password, confirmPassword } = this.state;
     return(
       <div className='sign-up'>
         <h2 className='title'>Do not have an account?</h2>
@@ -46,7 +46,7 @@ class SignUp extends React.Component {
           />
           <FormInput
             type='email'
-            name='emal'
+            name='email'
             value={email}
             onChange={this.handleChange}
             label='Email'
