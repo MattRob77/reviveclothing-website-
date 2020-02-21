@@ -15,9 +15,7 @@ function something(state = [], action) {
 export default combineReducers({
   cart: cartReducer,  //Not shorthand cart
   products: productsReducer,
-//  user: usersReducer,
   currentUser: currentUser,
-//  signInForm: signIn,
   signUpForm: signUp,
   something
 
