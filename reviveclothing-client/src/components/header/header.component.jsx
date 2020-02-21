@@ -20,15 +20,25 @@ const Header = ({ currentUser }) => (
     <Link className='option' to='/shop'>
       CONTACT
     </Link>
-    <Link className='option' to='/signin'>
-      SIGN IN
-    </Link>
+    {
+      currentUser && currentUser.email ?
+      <Link className='option' to='/'>
+        SIGN OUT
+      </Link> :
+      <Link className='option' to='/signin'>
+        SIGN IN
+      </Link>
+    }
   <CartIcon />
   </div>
 </div>
 )
 
 
+// const mapStateToProps = state => {
+//   return {
+//     currentUser: state.currentUser
+//   }
+// }
 
-
-export default Header;
+export default connect(state => ({currentUser: state.currentUser}))(Header);

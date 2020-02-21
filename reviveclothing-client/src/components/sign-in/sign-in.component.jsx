@@ -18,18 +18,20 @@ class SignIn extends React.Component {
     }
   }
 
-    handleSubmit = event => {
-    event.preventDefault();
+  handleSubmit = event => {
+     event.preventDefault();
+     this.props.signIn(this.state)
+     this.setState({ email: '', password: ''})
+     this.props.history.push('/')
+   }
 
-    this.props.signIn(this.state)
-    this.setState({ email: '', password: ''})
-  }
+   handleChange = event => {
+     const { name, value } = event.target;
 
-  handleChange = event => {
-    const { name, value} = event.target;
+     this.setState({ [name]: value});
+   }
 
-    this.setState({ [name]: value });
-  };
+
   render() {
     return(
       <div className='sign-in'>

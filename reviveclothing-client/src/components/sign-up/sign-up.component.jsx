@@ -1,6 +1,7 @@
 import React from 'react';
-import { connect } from 'react-redux'
 import { updateSignUpForm } from "../../actions/signUpForm";
+//import { signUp } from "../../actions/currentUser";
+import { connect } from 'react-redux'
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
 
@@ -19,21 +20,22 @@ class SignUp extends React.Component { //stateful class (store what the user is 
 
   };
 
-  handleSubmit = event => {
+   handleSubmit = event => {
     event.preventDefault();
+    this.props.signUp(this.state)
 
-    this.setState({ email: '', password: ''})
+
   }
 
   handleChange = event => {
-    const { name, value } = event.target;
+  const { name, value } = event.target;
 
-    this.setState({ [name]: value});
-  }
+  this.setState({ [name]: value});
+}
 
 
-  render() {
-    const { displayName, email, password, confirmPassword } = this.state;
+ render() {
+    //const { displayName, email, password, confirmPassword } = this.state;
     return(
       <div className='sign-up'>
         <h2 className='title'>Do not have an account?</h2>
@@ -80,8 +82,8 @@ class SignUp extends React.Component { //stateful class (store what the user is 
 
 const mapStateToProps = state => {
   return {
-    signUpForm: state.signUpForm
+    signUpFormData: state.signUpForm
   }
 }
 
-export default SignUp;
+export default connect(mapStateToProps, { updateSignUpForm }) (SignUp);

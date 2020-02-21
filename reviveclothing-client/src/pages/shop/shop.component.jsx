@@ -1,5 +1,4 @@
 import React from 'react';
-import SHOP_DATA from './shop.data.js';
 import CollectionPreview from '../../components/collection-preview/collection-preview';
 import { connect } from 'react-redux';
 import { getProducts } from '../../actions/products';

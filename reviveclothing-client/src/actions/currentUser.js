@@ -57,3 +57,21 @@ export const getCurrentUser = () => {
     .catch(console.log)
   }
 }
+
+// export const signOut = () => {
+//   return dispatch => {
+//     return fetch("http://localhost:3000/signup"), {
+//       credentials: "include",
+//       method: "POST",
+//       body: "",
+//       headers: {
+//         "Content-Type": "application/json"
+//      },
+//     }
+//   }
+
+ //    return {
+ //      type: 'SIGN_OUT',
+ //      payload: {  signedIn: false}
+ //    }
+ // }
