@@ -1,11 +1,11 @@
-.homepage {
+.homepage { //class selector //sass lets you nest css making it easier to read 
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 60px 90px;
 }
 
-.directory-menu {
+.directory-menu { //class selector
   width: 95%;
   display: flex;
   flex-wrap: wrap;
