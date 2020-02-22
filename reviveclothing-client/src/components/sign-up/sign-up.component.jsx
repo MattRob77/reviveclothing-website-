@@ -1,6 +1,6 @@
 import React from 'react';
 import { updateSignUpForm } from "../../actions/signUpForm";
-//import { signUp } from "../../actions/currentUser";
+import { signUp } from "../../actions/currentUser";
 import { connect } from 'react-redux'
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
@@ -23,8 +23,6 @@ class SignUp extends React.Component { //stateful class (store what the user is 
    handleSubmit = event => {
     event.preventDefault();
     this.props.signUp(this.state)
-
-
   }
 
   handleChange = event => {
@@ -33,20 +31,19 @@ class SignUp extends React.Component { //stateful class (store what the user is 
   this.setState({ [name]: value});
 }
 
-
  render() {
     //const { displayName, email, password, confirmPassword } = this.state;
     return(
       <div className='sign-up'>
         <h2 className='title'>Do not have an account?</h2>
         <span>Sign up with your email and password</span>
-        <form className='sign-up-form' onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit}>
           <FormInput
             type='displayName'
             name='displayName'
             handleChange={this.handleChange}
             value={this.state.displayName}
-            label='Display Name'
+            label='display name'
             required
           />
           <FormInput
@@ -54,7 +51,7 @@ class SignUp extends React.Component { //stateful class (store what the user is 
             name='email'
             handleChange={this.handleChange}
             value={this.state.email}
-            label='Email'
+            label='email'
             required
           />
           <FormInput
@@ -62,7 +59,7 @@ class SignUp extends React.Component { //stateful class (store what the user is 
             name='password'
             handleChange={this.handleChange}
             value={this.state.password}
-            label='Password'
+            label='password'
             required
           />
           <FormInput
@@ -80,10 +77,10 @@ class SignUp extends React.Component { //stateful class (store what the user is 
   }
 }
 
-const mapStateToProps = state => {
+const mapDispatchToProps = state => {
   return {
-    signUpFormData: state.signUpForm
+    signUpForm: state.signUpForm
   }
 }
 
-export default connect(mapStateToProps, { updateSignUpForm }) (SignUp);
+export default connect(mapDispatchToProps, { updateSignUpForm, signUp }) (SignUp);

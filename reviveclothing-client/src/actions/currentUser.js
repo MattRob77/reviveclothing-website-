@@ -1,3 +1,4 @@
+import { resetSignUpForm } from "./signUpForm"
 //synch action creators
 
 export const setCurrentUser = user => {
@@ -33,6 +34,34 @@ export const signIn = credentials => {
     .catch(console.log)
   }
 }
+
+
+export const signUp = credentials => {
+  console.log("credentials are", credentials)
+  console.log(JSON.stringify(credentials));
+  return dispatch => {
+    return fetch("http://localhost:3000/signup", {
+      include: "credentials",
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body:JSON.stringify(credentials)
+    })
+    .then(resp => resp.json())
+    .then(user => {
+      if (user.error) {
+        //alert(user.error)
+      } else {
+        dispatch(setCurrentUser(user))
+        dispatch(resetSignUpForm())
+
+      }
+    })
+    .catch(console.log)
+  }
+}
+
 
 
 

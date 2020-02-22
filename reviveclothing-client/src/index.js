@@ -17,7 +17,7 @@ ReactDOM.render(
       <App />
     </BrowserRouter>
  </Provider>
-,  document.getElementById('root')
+,  document.getElementById('root') //grabs elements from HTML inserting App
 );
 
 
