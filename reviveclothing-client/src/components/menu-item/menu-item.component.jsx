@@ -9,12 +9,12 @@ const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => ( //fun
   }}
   className={`${size} menu-item`} onClick={() => history.push(`${match.url}${linkUrl}`)}>
     <div className='content'>
-      <h1 className='title'>{title.toUpperCase()}</h1>
+      <h1 className='title'>{title.toUpperCase()}</h1> //uppercases the title 
       <span className='subtitle'>GO SHOPPING</span>
     </div>
   </div>
 );
-//used props to write js for more flexibility when styling 
+//used props to write js for more flexibility when styling
 export default withRouter (MenuItem); //returns back menu component and gives access to props
 
 

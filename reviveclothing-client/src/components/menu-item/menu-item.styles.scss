@@ -8,7 +8,7 @@
   border: 1px solid black;
   margin: 0 7.5px 15px;
   background-position: center; //sets the background position
-  background-size: cover; //makes the background a cover 
+  background-size: cover; //makes the background a cover
 
   &.large {
     height: 380px;
@@ -30,9 +30,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: bottom;
-    border: 1px solid clear;
-    background-color: white;
-    opacity: 0.5;
+    border: 1px solid clear; //sets the border 
+    background-color: white; //sets box inside
+    opacity: 0.5; //sets visibility
 
   .title {
     font-weight: bold;
