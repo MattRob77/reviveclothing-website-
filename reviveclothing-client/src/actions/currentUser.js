@@ -39,6 +39,7 @@ export const signIn = credentials => {
 export const signUp = credentials => {
   console.log("credentials are", credentials)
   console.log(JSON.stringify(credentials));
+  const data = { user: credentials };
   return dispatch => {
     return fetch("http://localhost:3000/signup", {
       include: "credentials",
@@ -46,7 +47,7 @@ export const signUp = credentials => {
       headers: {
         "Content-Type": "application/json"
       },
-      body:JSON.stringify(credentials)
+      body:JSON.stringify(data)
     })
     .then(resp => resp.json())
     .then(user => {

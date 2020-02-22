@@ -28,7 +28,7 @@ class App extends React.Component { //gives access to render through component//
   render(){  //render method
     return ( //returns HTML
       <div>
-      <Header /> //{}between brackets tells the HTML is Javascript
+      <Header /> 
         <Switch>
         <Route exact path='/' component={HomePage} />
         <Route path='/shop' component={ShopPage} />

@@ -7,8 +7,8 @@
   justify-content: center;
   border: 1px solid black;
   margin: 0 7.5px 15px;
-  background-position: center;
-  background-size: cover;
+  background-position: center; //sets the background position
+  background-size: cover; //makes the background a cover 
 
   &.large {
     height: 380px;

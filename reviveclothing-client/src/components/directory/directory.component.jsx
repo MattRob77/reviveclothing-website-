@@ -1,14 +1,14 @@
-import React from 'react';
+import React from 'react'; //react library
 
-import MenuItem from '../menu-item/menu-item.component';
+import MenuItem from '../menu-item/menu-item.component'; //imports menu-item component
 
-import './directory.styles.scss';
+import './directory.styles.scss'; //imported the stylesheet fore directory 
 
-class Directory extends React.Component {
+class Directory extends React.Component { //class component for storing the state
   constructor() {
     super(); //To able to grab all of our things inside react component class
 
-    this.state = { //state value
+    this.state = { //setting the state value for menu-item sections
       sections: [{
 
         title: 'womens',
@@ -34,10 +34,10 @@ class Directory extends React.Component {
     }
   }
   render() {
-    return (
+    return ( //returns the directory-menu
       <div className='directory-menu'>
-        {this.state.sections.map(({ id, ...otherSectionProps}) => ( //es6 spread operater
-            <MenuItem key={id} {...otherSectionProps} /> //passing in all key value pairs
+        {this.state.sections.map(({ id, ...otherSectionProps}) => ( //maps through sections and renders the menu-item
+            <MenuItem key={id} {...otherSectionProps} /> //passing in all the key value pairs//destructured to get the id
           ))}
       </div>
     );
