@@ -23,7 +23,7 @@ class SignIn extends React.Component { //class component to handle state
      this.props.history.push('/')//once submitted gets redirected to homepage/history came from react-router
    }
 
-   handleChange = event => {//calls the handle change for what the user types in
+   handleChange = event => { //calls the handle change for what the user types in
      const { name, value } = event.target; //pulling the name and value off of event target
 
      this.setState({ [name]: value}); //setting the state if name is email/password will point to value typed in

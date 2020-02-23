@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'; //imported library
 import { updateSignUpForm } from "../../actions/signUpForm";
 import { signUp } from "../../actions/currentUser";
 import { connect } from 'react-redux'
-import FormInput from '../form-input/form-input.component';
-import CustomButton from '../custom-button/custom-button.component';
+import FormInput from '../form-input/form-input.component'; //imported the form-input
+import CustomButton from '../custom-button/custom-button.component'; //imported global custom button
 
-import './sign-up.styles.scss';
+import './sign-up.styles.scss'; //imported styling
 
 class SignUp extends React.Component { //stateful class (store what the user is inputing)
   constructor(props) {
@@ -21,18 +21,19 @@ class SignUp extends React.Component { //stateful class (store what the user is 
   };
 
    handleSubmit = event => {
-    event.preventDefault();
+    event.preventDefault(); //prevent the default form action
     this.props.signUp(this.state)
+    this.setState({ displayName: '', email: '', password: '', confirmPassword: '' }) //setstate to update the state
+    // this.props.history.push('/') //once submitted gets redirected to homepage/history came from react-router
   }
 
-  handleChange = event => {
-  const { name, value } = event.target;
+  handleChange = event => { //calls the handle change for what the user types in
+  const { name, value } = event.target; //pulling the name and value off of event target
 
-  this.setState({ [name]: value});
+  this.setState({ [name]: value}); //setting the state if name is email/password will point to value typed in
 }
 
  render() {
-    //const { displayName, email, password, confirmPassword } = this.state;
     return(
       <div className='sign-up'>
         <h2 className='title'>Do not have an account?</h2>
