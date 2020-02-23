@@ -3,10 +3,10 @@ import { Switch, Route } from 'react-router-dom'; //interacts with the DOM// Swi
 import { connect } from 'react-redux'
 import { getCurrentUser } from './actions/currentUser'
 import HomePage from './pages/homepage/homepage.component'; //imports the homepage.compenent/pages
-import ShopPage from './pages/shop/shop.component'; //imports the shop page 
+import ShopPage from './pages/shop/shop.component'; //imports the shop page
 import SignInAndSignUpPage from'./pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
 import SignUp from './components/sign-up/sign-up.component';
-import Header from './components/header/header.component';
+import Header from './components/header/header.component'; //imports header to homepage
 
 import './App.css'; //Css for page
 
@@ -28,7 +28,7 @@ class App extends React.Component { //gives access to render through component//
   render(){  //render method
     return ( //returns HTML
       <div>
-      <Header />
+      <Header /> //placed at the top so it always renders no matter what
         <Switch> //Once switch sees a match for the route it doens't render anything else(more functionality and cleans up code)
         <Route exact path='/' component={HomePage} />//local host rendering homepage
         <Route path='/shop' component={ShopPage} />//shop route rendering the shop page
