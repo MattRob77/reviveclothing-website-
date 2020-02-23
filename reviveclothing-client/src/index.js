@@ -1,6 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import ReactDOM from 'react-dom'; //Imported for restful routing
+import { BrowserRouter } from 'react-router-dom'; //imported component gives routing funtionality to application 
 import { Provider } from 'react-redux';
 import store from './redux/store';
 

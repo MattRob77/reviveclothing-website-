@@ -1,5 +1,5 @@
 import React from 'react'; //everything needed to use react
-import { Switch, Route } from 'react-router-dom'; //interacts with the DOM
+import { Switch, Route } from 'react-router-dom'; //interacts with the DOM// Switch for rendering
 import { connect } from 'react-redux'
 import { getCurrentUser } from './actions/currentUser'
 import HomePage from './pages/homepage/homepage.component'; //imports the homepage.compenent/pages
@@ -28,12 +28,12 @@ class App extends React.Component { //gives access to render through component//
   render(){  //render method
     return ( //returns HTML
       <div>
-      <Header /> 
-        <Switch>
-        <Route exact path='/' component={HomePage} />
-        <Route path='/shop' component={ShopPage} />
-        <Route path='/signin' component={SignInAndSignUpPage} />
-        <Route path='/signup' component={SignUp} />
+      <Header />
+        <Switch> //Once switch sees a match for the route it doens't render anything else(more functionality and cleans up code)
+        <Route exact path='/' component={HomePage} />//local host rendering homepage
+        <Route path='/shop' component={ShopPage} />//shop route rendering the shop page
+        <Route path='/signin' component={SignInAndSignUpPage} />//signin route rendering the SignInAndSignUpPage
+        <Route path='/signup' component={SignUp} />//signup route rendering the SignUp page
         </Switch>
       </div>
     );
