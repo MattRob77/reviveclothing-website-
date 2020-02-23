@@ -70,8 +70,8 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 
 Credits:
-Fonts - Google Fonts 
-
+Fonts - Google Fonts
+Destructuring is a JavaScript feature that allows us to extract multiple pieces of data from an array or object and assign them to their own variables.
 
 
 
