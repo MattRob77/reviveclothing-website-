@@ -5,7 +5,7 @@ import { getCurrentUser } from './actions/currentUser'
 import HomePage from './pages/homepage/homepage.component'; //imports the homepage.compenent/pages
 import ShopPage from './pages/shop/shop.component'; //imports the shop page
 import SignInAndSignUpPage from'./pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
-import SignUp from './components/sign-up/sign-up.component';
+import SignUp from './components/sign-up/sign-up.component'; //imports signup component
 import Header from './components/header/header.component'; //imports header to homepage
 
 import './App.css'; //Css for page
@@ -28,12 +28,12 @@ class App extends React.Component { //gives access to render through component//
   render(){  //render method
     return ( //returns HTML
       <div>
-      <Header /> //placed at the top so it always renders no matter what
+      <Header /> 
         <Switch> //Once switch sees a match for the route it doens't render anything else(more functionality and cleans up code)
         <Route exact path='/' component={HomePage} />//local host rendering homepage
         <Route path='/shop' component={ShopPage} />//shop route rendering the shop page
         <Route path='/signin' component={SignInAndSignUpPage} />//signin route rendering the SignInAndSignUpPage
-        <Route path='/signup' component={SignUp} />//signup route rendering the SignUp page
+        //<Route path='/signup' component={SignUp} />//signup route rendering the SignUp page
         </Switch>
       </div>
     );

@@ -10,11 +10,11 @@ import './header.styles.scss'; //imported styling
 
 const Header = ({ currentUser }) => ( //functional component no state
   <div className='header'>
-    <Link className='logo-container' to="/"> //Link to logo so when the user clicks on logo takes the user to the homepage
+    <Link className='logo-container' to="/">
       <Logo className='logo' />
     </Link>
     <div className='options'>
-    <Link className='option' to='/shop'> //Link to the shop route
+    <Link className='option' to='/shop'>
       SHOP
     </Link>
     <Link className='option' to='/shop'>
@@ -25,7 +25,7 @@ const Header = ({ currentUser }) => ( //functional component no state
       <Link className='option' to='/'>
         SIGN OUT
       </Link> :
-      <Link className='option' to='/signin'> //Link to signin route
+      <Link className='option' to='/signin'> 
         SIGN IN
       </Link>
     }
