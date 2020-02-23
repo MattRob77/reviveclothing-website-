@@ -5,7 +5,6 @@ import { getCurrentUser } from './actions/currentUser'
 import HomePage from './pages/homepage/homepage.component'; //imports the homepage.compenent/pages
 import ShopPage from './pages/shop/shop.component'; //imports the shop page
 import SignInAndSignUpPage from'./pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
-import SignUp from './components/sign-up/sign-up.component'; //imports signup component
 import Header from './components/header/header.component'; //imports header to homepage
 
 import './App.css'; //Css for page
@@ -28,12 +27,11 @@ class App extends React.Component { //gives access to render through component//
   render(){  //render method
     return ( //returns HTML
       <div>
-      <Header /> 
-        <Switch> //Once switch sees a match for the route it doens't render anything else(more functionality and cleans up code)
-        <Route exact path='/' component={HomePage} />//local host rendering homepage
-        <Route path='/shop' component={ShopPage} />//shop route rendering the shop page
-        <Route path='/signin' component={SignInAndSignUpPage} />//signin route rendering the SignInAndSignUpPage
-        //<Route path='/signup' component={SignUp} />//signup route rendering the SignUp page
+      <Header />
+        <Switch>
+        <Route exact path='/' component={HomePage} />
+        <Route path='/shop' component={ShopPage} />
+        <Route path='/signin' component={SignInAndSignUpPage} />
         </Switch>
       </div>
     );
@@ -42,6 +40,7 @@ class App extends React.Component { //gives access to render through component//
 
 export default connect (null, { getCurrentUser }) (App);
 
+//Once switch sees a match for the route it doens't render anything else(more functionality and cleans up code)
 //setstate gives the ability to change the state
 // AAFTDRS Action-Creator,Action, Fetch, Thunk, Dispatch, Reducer, Store
 //fetch returns a promise

@@ -4,7 +4,6 @@ import cartReducer from './cart/cartReducer';
 import productsReducer from './products/productsReducer';
 //import usersReducer from './user/usersReducer';
 import currentUser from './user/currentUser';
-import signIn from "./signInForm/signIn";
 import signUp from "./signUpForm/signUp";
 
 
