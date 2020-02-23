@@ -1,7 +1,7 @@
 import React from 'react'; //everything needed to use react
 import { Switch, Route } from 'react-router-dom'; //interacts with the DOM// Switch for rendering
-import { connect } from 'react-redux'
-import { getCurrentUser } from './actions/currentUser'
+import { connect } from 'react-redux' //imported connect to connect to the redux-store
+import { getCurrentUser } from './actions/currentUser' //imported action for current user 
 import HomePage from './pages/homepage/homepage.component'; //imports the homepage.compenent/pages
 import ShopPage from './pages/shop/shop.component'; //imports the shop page
 import SignInAndSignUpPage from'./pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
@@ -27,7 +27,7 @@ class App extends React.Component { //gives access to render through component//
   render(){  //render method
     return ( //returns HTML
       <div>
-      <Header />
+      <Header currentUser={this.state.currentUser} />
         <Switch>
         <Route exact path='/' component={HomePage} />
         <Route path='/shop' component={ShopPage} />
