@@ -1,7 +1,7 @@
 import React from 'react'; //imported library
 import { Link } from 'react-router-dom'; //imported Link to have functionality of using Link
-import { connect } from 'react-redux';
-import { ReactComponent as Logo } from '../../assets/RVIV.svg'; //imported with ReactComponent so react knows about the svg image 
+import { connect } from 'react-redux'; //imported connect to connect to the redux-store
+import { ReactComponent as Logo } from '../../assets/RVIV.svg'; //imported with ReactComponent so react knows about the svg image
 
 import CartIcon from '../cart-icon/cart-icon.component'; //imported the cart icon without functionality for now
 
