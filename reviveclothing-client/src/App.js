@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom'; //interacts with the DOM// Swi
 import { connect } from 'react-redux'
 import { getCurrentUser } from './actions/currentUser'
 import HomePage from './pages/homepage/homepage.component'; //imports the homepage.compenent/pages
-import ShopPage from './pages/shop/shop.component';
+import ShopPage from './pages/shop/shop.component'; //imports the shop page 
 import SignInAndSignUpPage from'./pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
 import SignUp from './components/sign-up/sign-up.component';
 import Header from './components/header/header.component';
