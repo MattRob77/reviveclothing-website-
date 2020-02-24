@@ -4,8 +4,8 @@ import { BrowserRouter } from 'react-router-dom'; //imported component gives rou
 import { Provider } from 'react-redux'; //imported  Redux Provider allowing access to store to any components
 import store from './redux/store'; //imported store(state)
 
-import './index.css';
-import App from './App';
+import './index.css'; //imported styling
+import App from './App'; //imported app connecting it to index
 import * as serviceWorker from './serviceWorker';
 
 
@@ -19,7 +19,7 @@ ReactDOM.render(
  </Provider>
 ,  document.getElementById('root') //grabs elements from HTML inserting App
 );
-
+//Provider store={store} passing in gives access to store 
 
 
 serviceWorker.unregister();
