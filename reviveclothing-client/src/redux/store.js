@@ -7,7 +7,7 @@ import thunk from 'redux-thunk'; //imported thunk middleware
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ||
 compose; //applied Redux Dev-Tools for debugging
 
-const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)))
+const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)))//applied thunk middleware
 //creates store passing functions of rootReducer, componseEnhancers and Middleware
 
 export default store;
