@@ -1,7 +1,7 @@
 import React from 'react'; //everything needed to use react
 import { Switch, Route } from 'react-router-dom'; //interacts with the DOM// Switch for rendering
 import { connect } from 'react-redux' //imported connect to connect to the redux-store
-import { getCurrentUser } from './actions/currentUser' //imported action for current user 
+import { getCurrentUser } from './actions/currentUser' //imported action for current user
 import HomePage from './pages/homepage/homepage.component'; //imports the homepage.compenent/pages
 import ShopPage from './pages/shop/shop.component'; //imports the shop page
 import SignInAndSignUpPage from'./pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
@@ -37,9 +37,10 @@ class App extends React.Component { //gives access to render through component//
     );
   }
 }
+//Could use MapDispatchToProps getting rid of the constructor and state
 
 export default connect (null, { getCurrentUser }) (App);
-
+//dispatch lets redux know passing an object to every reducer
 //Once switch sees a match for the route it doens't render anything else(more functionality and cleans up code)
 //setstate gives the ability to change the state
 // AAFTDRS Action-Creator,Action, Fetch, Thunk, Dispatch, Reducer, Store
