@@ -1,10 +1,14 @@
+//Using (thunk)which is a function that returns a function that gives access to dispatch
+//So the application can dispatch multiple actions and handle the async code
+
+
 import { resetSignUpForm } from "./signUpForm"
 //synch action creators
 
 export const setCurrentUser = user => {
   return {
     type: "SET_CURRENT_USER",
-    user //shorthand same as payload: user 
+    user //shorthand same as payload: user
   }
 }
 
@@ -13,8 +17,8 @@ export const setCurrentUser = user => {
 export const signIn = credentials => {
   console.log("credentials are", credentials)
   console.log(JSON.stringify(credentials));
-  return dispatch => {
-    return fetch("http://localhost:3000/signin", {
+  return dispatch => { //dispatch from thunk
+    return fetch("http://localhost:3000/signin", { //api fetch call to get the Data
       include: "credentials",
       method: "POST",
       headers: {
