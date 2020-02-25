@@ -1,14 +1,11 @@
-import React from 'react'; //imported library
+import React from 'react'; 
 
-import './custom-button.styles.scss'; //imported styling
+import './custom-button.styles.scss';
 
 const CustomButton = ({ children, ...otherProps}) => (
-  <button className='custom-button' {...otherProps}> 
+  <button className='custom-button' {...otherProps}>
     {children}
   </button>
 );
 
 export default CustomButton;
-
-//stateless functional component with children and otherprops property spreading otherprops in
-//if type submit button now will get the custom button
