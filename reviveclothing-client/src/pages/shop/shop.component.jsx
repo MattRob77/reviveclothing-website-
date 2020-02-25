@@ -8,7 +8,7 @@ import { getProducts } from '../../actions/products'; //imports the fetch from g
 class ShopPage extends React.Component { //class component for storing the state
   constructor(props) //access to the state
 {  super(props); //To able to grab all of our things inside react component class
-//can refracture turning into functional component 
+//can refracture turning into functional component
 }
   componentDidMount() {
     this.props.getProducts()
