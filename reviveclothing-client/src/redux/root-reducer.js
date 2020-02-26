@@ -7,7 +7,7 @@ import signUp from "./signUpForm/signUp";
 
 
 export default combineReducers({
-  cart: cartReducer,  //Not shorthand cart
+  cart: cartReducer, 
   products: productsReducer,
   currentUser: currentUser,
   signUpForm: signUp,
