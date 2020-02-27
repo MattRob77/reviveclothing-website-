@@ -2,7 +2,7 @@ import React from 'react'; //react library
 
 import MenuItem from '../menu-item/menu-item.component'; //imports menu-item component
 
-import './directory.styles.scss'; //imported the stylesheet fore directory 
+import './directory.styles.scss'; //imported the stylesheet fore directory
 
 class Directory extends React.Component { //class component for storing the state
   constructor() {
@@ -15,14 +15,14 @@ class Directory extends React.Component { //class component for storing the stat
         imageUrl: 'https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60',
         size: 'large',
         id: 6,
-        linkUrl: 'womens'
+        linkUrl: 'shop'
       },
       {
         title: 'mens',
         imageUrl: 'https://images.unsplash.com/photo-1524383954004-5663dc51fa67?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60',
         size: 'large',
         id: 7,
-        linkUrl: 'mens'
+        linkUrl: 'shop'
       },
       {
         title: 'new arrivals',
