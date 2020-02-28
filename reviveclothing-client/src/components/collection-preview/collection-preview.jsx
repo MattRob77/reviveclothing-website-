@@ -10,8 +10,8 @@ const CollectionPreview = ({ title, items }) => ( //functional component with ti
     <div className='preview'>
       {items
         .filter((item, idx) => idx < 4)////Filtering, Mapping items and index then rendering object that is less than 4
-        .map(({ id, ...otheritemProps}) => (
-          <CollectionItem key={id} {...otheritemProps} /> //spread the otheritemProps into CollectionItem
+        .map((item) => (
+          <CollectionItem key={item.id} item={item} /> //spread the otheritemProps into CollectionItem
         ))}
       </div>
     </div>

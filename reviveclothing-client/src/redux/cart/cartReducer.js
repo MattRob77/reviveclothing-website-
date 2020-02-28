@@ -1,12 +1,22 @@
-export default(state=[], action) => {
-  switch(action.type) {
-    case 'Add_To_Cart':
-      return [...state, action.payload]
-    default:
-      return state
-  }
-}
+import CartActionTypes from './cartTypes';
 
+const INITIAL_STATE = {
+  cartItems: []
+};
+
+const cartReducer = (state = INITIAL_STATE, action) => {
+  switch (action.type) {
+    case CartActionTypes.ADD_ITEM:
+      return {
+        ...state,
+        cartItems: [...state.cartItems, action.payload]
+      };
+    default:
+      return state;
+  }
+};
+
+export default cartReducer;
 
 // const Initial_State = {
 //   cartItems: []
