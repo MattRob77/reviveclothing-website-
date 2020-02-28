@@ -29,10 +29,8 @@ const mapDispatchToProps = dispatch => ({
   addItem: item => dispatch(addItem(item))
 })
 //dispatched the action on the created actual action
-//using the addItem action creator 
+//using the addItem action creator
 
 export default connect(null, mapDispatchToProps)(CollectionItem);
 
-
-//Used a footer for name and price below the image
-//span is used to group the elements or objects together
+// Used span is used to group the elements or objects together
