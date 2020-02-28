@@ -19,7 +19,7 @@ ReactDOM.render(
  </Provider>
 ,  document.getElementById('root') //grabs elements from HTML inserting App
 );
-//Provider store={store} passing in gives access to store 
+//Provider store={store} passing in gives access to store
 
 
 serviceWorker.unregister();

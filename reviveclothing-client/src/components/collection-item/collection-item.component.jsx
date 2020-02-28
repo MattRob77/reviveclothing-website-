@@ -28,6 +28,8 @@ const CollectionItem = ({ item, addItem }) => {
 const mapDispatchToProps = dispatch => ({
   addItem: item => dispatch(addItem(item))
 })
+//dispatched the action on the created actual action
+//using the addItem action creator 
 
 export default connect(null, mapDispatchToProps)(CollectionItem);
 
