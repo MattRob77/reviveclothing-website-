@@ -4,8 +4,25 @@ import './collection-item.styles.scss'; //imported styling
 import CustomButton from '../custom-button/custom-button.component';
 import { addItem } from '../../redux/cart/cartActions';
 
-const CollectionItem = ({ item, addItem }) => {
-  const { name, price, imageUrl } = item;
+class CollectionItem extends React.Component  {
+
+  state = {
+    count: 0
+  }
+
+  constructor(props) {
+    super(props);
+
+}
+
+    increment = () => {
+      this.setState ({
+        count: this.state.count + 1
+      })
+    }
+
+  render() {
+    const { name, price, imageUrl } = this.props.item;
   return ( //functional component with no state
   <div className='collection-item'>
     <div
@@ -18,11 +35,13 @@ const CollectionItem = ({ item, addItem }) => {
       <span className='name'>{name}</span>
       <span className='price'>{price}</span>
     </div>
-    <CustomButton onClick={() => addItem(item)}>
+    <CustomButton onClick={() => this.props.addItem(this.props.item)}>
     Add to cart
     </CustomButton>
+    <button onClick={this.increment} > Like Item</button>
+    <span className='like-count'>{this.state.count}</span>
   </div>
-);
+)};
 };
 
 const mapDispatchToProps = dispatch => ({

@@ -1,6 +1,6 @@
 import React from 'react';//imported in library
 
-import { ReactComponent as ShoppingIcon } from '../../assets/shopping-bag.svg';
+import { ReactComponent as ShoppingIcon } from '../../assets/sales.svg';
 import './cart-icon.styles.scss'; //imported styling
 
 
