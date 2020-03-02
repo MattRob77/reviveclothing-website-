@@ -4,6 +4,7 @@ import { connect } from 'react-redux'; //Higher order component that gives compo
 import { ReactComponent as Logo } from '../../assets/RVIV.svg'; //imported with ReactComponent so react knows about the svg image
 
 import CartIcon from '../cart-icon/cart-icon.component'; //imported the cart icon without functionality for now
+import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 
 import './header.styles.scss'; //imported styling
 
@@ -31,6 +32,7 @@ const Header = ({ currentUser }) => ( //functional component no state
     }
   <CartIcon />
   </div>
+  <CartDropdown />
 </div>
 )
 
