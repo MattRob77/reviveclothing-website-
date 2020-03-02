@@ -10,10 +10,6 @@ class CollectionItem extends React.Component  {
     count: 0
   }
 
-  constructor(props) {
-    super(props);
-
-}
 
     increment = () => {
       this.setState ({
