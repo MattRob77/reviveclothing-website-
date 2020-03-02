@@ -42,5 +42,3 @@ const mapStateToProps = ({ currentUser: currentUser, cart: { hidden } }) => ({
 });
 
 export default connect(mapStateToProps)(Header);
-//export default connect(state => ({currentUser: state.currentUser, cart: hidden}))(Header); //the same as doing mapStateToProps
-//mapStateToProps & connect for props from reducers
