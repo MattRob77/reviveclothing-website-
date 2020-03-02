@@ -9,7 +9,7 @@ import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 import './header.styles.scss'; //imported styling
 
 
-const Header = ({ currentUser }) => ( //functional component no state
+const Header = ({ currentUser, hidden }) => ( //functional component no state
   <div className='header'>
     <Link className='logo-container' to="/">
       <Logo className='logo' />
@@ -32,16 +32,15 @@ const Header = ({ currentUser }) => ( //functional component no state
     }
   <CartIcon />
   </div>
-  <CartDropdown />
+  {hidden ? null : <CartDropdown />}
 </div>
 )
 
+const mapStateToProps = ({ currentUser: currentUser, cart: { hidden } }) => ({
+  currentUser,
+  hidden
+});
 
-// const mapStateToProps = state => { state is the root-reducer
-//   return {
-//     currentUser: state.currentUser value is the value needed to pass in
-//   }
-// }
-
-export default connect(state => ({currentUser: state.currentUser}))(Header); //the same as doing mapStateToProps
+export default connect(mapStateToProps)(Header);
+//export default connect(state => ({currentUser: state.currentUser, cart: hidden}))(Header); //the same as doing mapStateToProps
 //mapStateToProps & connect for props from reducers
