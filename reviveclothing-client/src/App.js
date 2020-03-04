@@ -2,11 +2,13 @@ import React from 'react'; //everything needed to use react
 import { Switch, Route } from 'react-router-dom'; //interacts with the DOM// Switch for rendering
 import { connect } from 'react-redux' //imported connect to connect to the redux-store
 import { getCurrentUser } from './actions/currentUser' //imported action for current user
+
+
 import HomePage from './pages/homepage/homepage.component'; //imports the homepage.compenent/pages
 import ShopPage from './pages/shop/shop.component'; //imports the shop page
 import SignInAndSignUpPage from'./pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
 import Header from './components/header/header.component'; //imports header to homepage
-
+import CheckoutPage from './pages/checkout/checkout.component';
 import './App.css'; //Css for page
 
 
@@ -32,6 +34,7 @@ class App extends React.Component { //gives access to render through component//
         <Route exact path='/' component={HomePage} />
         <Route path='/shop' component={ShopPage} />
         <Route path='/signin' component={SignInAndSignUpPage} />
+        <Route exact path='/checkout' component={CheckoutPage} />
         </Switch>
       </div>
     );
