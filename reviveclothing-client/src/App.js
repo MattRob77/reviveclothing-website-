@@ -9,7 +9,7 @@ import ShopPage from './pages/shop/shop.component'; //imports the shop page
 import SignInAndSignUpPage from'./pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
 import Header from './components/header/header.component'; //imports header to homepage
 import CheckoutPage from './pages/checkout/checkout.component';
-import CategoryPage from './pages/category/category.component';
+import CollectionPage from './pages/category/category.component';
 import './App.css'; //Css for page
 
 
@@ -34,7 +34,7 @@ class App extends React.Component { //gives access to render through component//
         <Switch>
         <Route exact path='/' component={HomePage} />
         <Route path='/shop' component={ShopPage} />
-        <Route path='/category' component={CategoryPage} />
+        <Route path='/collection' component={CollectionPage} />
         <Route path='/signin' component={SignInAndSignUpPage} />
         <Route exact path='/checkout' component={CheckoutPage} />
         </Switch>
