@@ -6,10 +6,10 @@ import './collection.styles.scss';
 
 
 const CollectionPage = () => (
-  <div className='category'>
+  <div className='collection-page'>
     <h2>COLLECTION PAGE</h2>
   </div>
 );
 
 
-export default CategoryPage;
+export default CollectionPage;
