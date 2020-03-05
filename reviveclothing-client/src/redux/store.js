@@ -1,4 +1,5 @@
 import { createStore, applyMiddleware, compose} from 'redux'; //imported createStore & Middleware
+import { persistStore } from 'redux-persist';
 import rootReducer from '../redux/root-reducer'; //imported root-reducer connecting it to the store
 import thunk from 'redux-thunk'; //imported thunk middleware
 
