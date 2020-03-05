@@ -8,7 +8,9 @@ import thunk from 'redux-thunk'; //imported thunk middleware
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ||
 compose; //applied Redux Dev-Tools for debugging
 
-const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)))//applied thunk middleware
+export const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)))//applied thunk middleware
 //creates store passing functions of rootReducer, componseEnhancers and Middleware
 
-export default store;
+export const persistor = persistStore(store); //persisted verson of store
+
+export default { store, persistor };
