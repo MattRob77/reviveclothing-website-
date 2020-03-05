@@ -1,9 +1,9 @@
 import React from 'react'; //react library
 import CollectionPreview from '../../components/collection-preview/collection-preview';
+import CategoryPage from '../category/category.component';
 import { connect } from 'react-redux';
 import { getProducts } from '../../actions/products'; //imports the fetch from getproducts action instead of uisng frontend to show products
-
-
+import { Route } from 'react-router-dom';
 
 class ShopPage extends React.Component { //class component for storing the state
   constructor(props) //access to the state
@@ -21,7 +21,6 @@ class ShopPage extends React.Component { //class component for storing the state
           <CollectionPreview key={id} {...otherCollectionProps} /> //renders and spreads in the otherCollectionprops
         ))
       }
-
     </div>)
   }
 }
