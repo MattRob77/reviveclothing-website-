@@ -2,7 +2,7 @@
    {
      id: 1,
      title: 'Hats',
-     routeName: 'hats',
+     routeName: 'mens',
      items: [
    {
      id: 1,
@@ -51,7 +51,7 @@
 {
  id: 2,
  title: 'Sneakers',
- routeName: 'sneakers',
+ routeName: 'mens',
  items: [
    {
      id: 10,
@@ -88,7 +88,7 @@
 {
  id: 3,
  title: 'Jackets',
- routeName: 'jackets',
+ routeName: 'mens',
  items: [
    {
      id: 18,

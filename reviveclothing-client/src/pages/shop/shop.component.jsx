@@ -1,33 +1,29 @@
 import React from 'react'; //react library
-import CollectionPreview from '../../components/collection-preview/collection-preview';
+
 import CollectionPage from '../collection/collection.component';
-import { connect } from 'react-redux';
+import CollectionsOverview from '../../components/collection-overview/collection-overview.component';
 import { getProducts } from '../../actions/products'; //imports the fetch from getproducts action instead of uisng frontend to show products
 import { Route } from 'react-router-dom';
 
-class ShopPage extends React.Component { //class component for storing the state
-  constructor(props) //access to the state
-{  super(props); //To able to grab all of our things inside react component class
-//can refracture turning into functional component
-}
-  componentDidMount() {
-    this.props.getProducts()
-  };
+const ShopPage = ({ collections }) => ( //class component for storing the state
+//   constructor(props) //access to the state
+// {  super(props); //To able to grab all of our things inside react component class
+// //can refracture turning into functional component
+// }
+//   componentDidMount() {
+//     this.props.getProducts()
+//   };
 
-  render() {
-    return (<div className='shop-page'>
-      {
-        this.props.products.map(({id, ...otherCollectionProps}) => ( //maps over products
-          <CollectionPreview key={id} {...otherCollectionProps} /> //renders and spreads in the otherCollectionprops
-        ))
-      }
-    </div>)
-  }
-}
+  // render() {
+  //   return (
+    <div className='shop-page'>
+      <CollectionsOverview />
+    </div>
+  );
 
-const mapStateToProps = ({products}) => ({ //giving access props
-  products: Object.values(products) // Object.values creates a new array of all objects
-})
+// const mapStateToProps = ({products}) => ({ //giving access props
+//   products: Object.values(products) // Object.values creates a new array of all objects
+// })
 
-export default connect(mapStateToProps, { getProducts })(ShopPage);
-//connected component to the redux store
+export default ShopPage;
+//connected component to the redux store { getProducts }
