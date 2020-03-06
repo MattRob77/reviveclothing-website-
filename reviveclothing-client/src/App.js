@@ -9,7 +9,7 @@ import ShopPage from './pages/shop/shop.component'; //imports the shop page
 import SignInAndSignUpPage from'./pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
 import Header from './components/header/header.component'; //imports header to homepage
 import CheckoutPage from './pages/checkout/checkout.component';
-import CollectionPage from './pages/category/category.component';
+import CollectionPage from './pages/collection/collection.component';
 import './App.css'; //Css for page
 
 
