@@ -1,6 +1,6 @@
 import React from 'react'; //react library
 import CollectionPreview from '../../components/collection-preview/collection-preview';
-import CategoryPage from '../category/category.component';
+import CollectionPage from '../collection/collection.component';
 import { connect } from 'react-redux';
 import { getProducts } from '../../actions/products'; //imports the fetch from getproducts action instead of uisng frontend to show products
 import { Route } from 'react-router-dom';
