@@ -51,7 +51,7 @@
 {
  id: 2,
  title: 'Sneakers',
- routeName: 'mens',
+ routeName: 'new',
  items: [
    {
      id: 10,
@@ -88,7 +88,7 @@
 {
  id: 3,
  title: 'Jackets',
- routeName: 'mens',
+ routeName: 'new',
  items: [
    {
      id: 18,

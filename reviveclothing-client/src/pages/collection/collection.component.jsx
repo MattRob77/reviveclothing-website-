@@ -5,7 +5,7 @@ import CollectionItem from '../../components/collection-item/collection-item.com
 import './collection.styles.scss';
 
 
-const CollectionPage = () => (
+const CollectionPage = ({ match }) => (
   <div className='collection-page'>
     <h2>COLLECTION PAGE</h2>
   </div>
