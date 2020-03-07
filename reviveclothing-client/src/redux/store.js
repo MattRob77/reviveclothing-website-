@@ -4,7 +4,6 @@ import logger from 'redux-logger';
 import rootReducer from '../redux/root-reducer'; //imported root-reducer connecting it to the store
 import thunk from 'redux-thunk'; //imported thunk middleware
 
-const middlewares = [logger];
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ||
 compose; //applied Redux Dev-Tools for debugging

@@ -2,7 +2,7 @@ import React from 'react'; //react library
 
 import CollectionPage from '../collection/collection.component';
 import CollectionsOverview from '../../components/collection-overview/collection-overview.component';
-import { getProducts } from '../../actions/products'; //imports the fetch from getproducts action instead of uisng frontend to show products
+//import { getProducts } from '../../actions/products'; //imports the fetch from getproducts action instead of uisng frontend to show products
 import { Route } from 'react-router-dom';
 
 const ShopPage = ({ match }) => ( //class component for storing the state
