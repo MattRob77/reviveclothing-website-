@@ -7,11 +7,11 @@ import CollectionItem from '../../components/collection-item/collection-item.com
 import './collection.styles.scss';
 
 
-const CollectionPage = ({ match }) => {
-  console.log(match.params.collectionId);
+const CollectionPage = ({ collection }) => {
+  console.log(collection);
   return (
-    <div className='collection'>
-      <h2>Collection Page </h2>
+    <div className='collection-page'>
+      <h2>collection Page </h2>
     </div>
   );
 };
