@@ -10,10 +10,10 @@ import './collection.styles.scss';
 const CollectionPage = ({ match }) => {
   console.log(match.params.collectionId);
   return (
-  <div className='collection'>
-    <h2>Collection Page </h2>
-  </div>
-);
+    <div className='collection'>
+      <h2>Collection Page </h2>
+    </div>
+  );
 };
 
 

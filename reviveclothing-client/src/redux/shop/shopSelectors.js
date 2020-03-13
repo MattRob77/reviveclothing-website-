@@ -4,7 +4,9 @@ const Collection_ID_MAP = {
   Mens: 1,
   New: 2,
   New: 3,
-  Womens: 4
+  Womens: 4,
+  Mens: 5
+
 };
 
 
