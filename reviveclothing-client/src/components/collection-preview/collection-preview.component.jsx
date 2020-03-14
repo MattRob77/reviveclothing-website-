@@ -9,7 +9,7 @@ const CollectionPreview = ({ title, items }) => ( //functional component with ti
     <h1 className='title'>{title.toUpperCase()}</h1>
     <div className='preview'>
       {items
-        .filter((item, idx) => idx < 4)////Filtering, Mapping items and index then rendering object that is less than 4
+        .filter((item, idx) => idx < 3)////Filtering, Mapping items and index then rendering object that is less than 4
         .map((item) => (
           <CollectionItem key={item.id} item={item} /> //spread the otheritemProps into CollectionItem
         ))}
@@ -18,3 +18,4 @@ const CollectionPreview = ({ title, items }) => ( //functional component with ti
 );
 
 export default CollectionPreview;
+//Could make a scroll like feature with all items items inside 

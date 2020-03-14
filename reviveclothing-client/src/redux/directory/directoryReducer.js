@@ -19,7 +19,7 @@ const INITIAL_STATE = {
     imageUrl: 'https://images.unsplash.com/photo-1502920514313-52581002a659?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
     size: 'large',
     id: 8,
-    linkUrl: 'shop/new_arrivals'
+    linkUrl: 'shop/new'
   }]
 };
 

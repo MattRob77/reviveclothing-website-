@@ -1,5 +1,5 @@
- const SHOP_DATA = [
-   {
+ const SHOP_DATA = {
+  mens: {
      id: 1,
      title: 'Mens',
      routeName: 'mens',
@@ -48,7 +48,7 @@
    }
  ]
 },
-{
+new: {
  id: 2,
  title: 'New',
  routeName: 'new',
@@ -85,7 +85,7 @@
    }
  ]
 },
-{
+new: {
  id: 3,
  title: 'New',
  routeName: 'new',
@@ -122,7 +122,7 @@
    }
  ]
 },
-{
+womens: {
  id: 4,
  title: 'Womens',
  routeName: 'womens',
@@ -159,7 +159,7 @@
    }
  ]
 },
-{
+mens: {
  id: 5,
  title: 'Mens',
  routeName: 'mens',
@@ -190,7 +190,7 @@
    }
  ]
 }
-];
+};
 
 
 
