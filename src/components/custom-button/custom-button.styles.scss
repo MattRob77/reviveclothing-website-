@@ -1,0 +1,21 @@
+.custom-button {
+  width: 40%;
+  height: 50px;
+  letter-spacing: 0.5px;
+  line-height: 50px;
+  padding: 0 10px 0 10px;
+  font-size: 13px;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Lato';
+  font-weight: bolder;
+  cursor: pointer;
+
+  &.google-sign-in {
+    background-color: #4285f4;
+    color: white;
+    width: 60%;
+
+  }
+}
